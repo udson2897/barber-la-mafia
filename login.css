@@ -136,6 +136,7 @@ main {
 }
 
 #login {
+  margin-top: 50px;
   background-color: rgba(247, 243, 243, 0.226);
   width: 320px;
   border-radius: 15px;
