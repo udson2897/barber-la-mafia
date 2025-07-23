@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Man Barber Shop</title>
+
+  <link rel="stylesheet" href="login.css" >
+  <link rel="stylesheet" href="responsividade.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="background"></div>
+
+  <main>
+    <section id="login">
+      <div id="formulario">
+        <img src="mustache-svgrepo-com.svg" alt="Bigode" class="bigode" >
+        <h2>Cadastro Big Man Barber</h2>
+        
+
+        <form id="formCadastro" action="#">
+             <div class="campo">
+            <label for="nome">Nome</label>
+            <div class="input-wrapper">
+              
+              <input type="text" name="nome" id="nome" placeholder="Seu nome" autocomplete="email" required maxlength="30" />
+            </div>
+          </div>
+          <div class="campo">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              
+              <input type="email" name="email" id="email" placeholder="Seu e-mail" autocomplete="email" required maxlength="30" />
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <div class="input-wrapper">
+              
+              <input type="password" name="senha" id="senha" placeholder="Sua senha" autocomplete="current-password" required minlength="8" maxlength="20" />
+            </div>
+          </div>
+
+          <input type="submit" value="Cadastrar" class="submit" />
+          
+        </form>
+       
+          
+          
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+
+  <footer id="rodape">
+    
+    <div class="texto">
+      <p>&copy; 2025 Big Man Barber. Todos os direitos reservados. </p>
+      <p>Desenvolvido pela U.D Corp</p><img src="u.d.jpg" class="logo-rodape">
+      
+    </div>
+  
+  </footer>
+
+  <script>
+  const form = document.getElementById('formCadastro');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Aqui você pode adicionar validações extras, enviar dados para backend, etc.
+
+    // Exemplo simples: só redirecionar se o formulário for válido
+    if(form.checkValidity()) {
+      alert('Cadastro realizado com sucesso!');
+      // Redireciona para a página que quiser após o cadastro
+      window.location.href = 'index.html'; 
+    } else {
+      alert('Por favor, preencha todos os campos corretamente.');
+    }
+  });
+</script>
+   
+</body>
+
+</html>
